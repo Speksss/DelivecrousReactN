@@ -1,12 +1,12 @@
 import React from 'react';
 import Dish from './components/Dish';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Projet Dev Mobile</Text>
-      <Dish/>
+      <Text>Projet Dev Mobile - Delivecrous</Text>
+      <Dish name='nom1' description='decription' price='5' allergens='ftyvghbj'/>
     </View>
   );
 }
