@@ -4,15 +4,11 @@ import { TouchableHighlight, StyleSheet, Text, View, Modal } from 'react-native'
 import { CheckBox } from 'react-native-elements';
 
 export default function Dish(props) {
-  const [id, setId] = useState(props.id)
-  const [name, setName] = useState(props.name);
-  const [description, setDescription] = useState(props.description);
-  const [price, setPrice] = useState(props.price);
-  const [allergens, setAllergens] = useState(props.allergens);
-  const [checked, setChecked] = useState(props.checked);
+  const [checked, setChecked] = useState(props.dish.checked);
   const [visible, setVisible] = useState(false);
 
   useEffect(()=>{
+    props.dish.checked = checked;
     if (checked){
       //rajouter au panier
 
@@ -27,16 +23,16 @@ export default function Dish(props) {
         onRequestClose={() => {setVisible(false)}}>
         <Menu left={{icon : 'arrow-back', color : '#fff', onPress : ()=>setVisible(false)}}/>
         <View>
-          <Text>{name}</Text>
-          <Text>{description}</Text>
-          <Text>{price}</Text>
-          <Text>{allergens}</Text>
+          <Text>{props.dish.name}</Text>
+          <Text>{props.dish.description}</Text>
+          <Text>{props.dish.price}</Text>
+          <Text>{props.dish.allergens}</Text>
           <CheckBox checked={checked} onPress={()=>setChecked(!checked)}/>
         </View>
       </Modal>
       <View>
         <TouchableHighlight onPress={() => setVisible(true)}>
-          <Text>{name} - {price}</Text>
+          <Text>{props.dish.name} - {props.dish.price}</Text>
         </TouchableHighlight>
         <CheckBox checked={checked} onPress={()=>setChecked(!checked)}/>
       </View>

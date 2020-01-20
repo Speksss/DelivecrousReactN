@@ -1,0 +1,28 @@
+export default data = [{
+        id: '1',
+        name: 'Pate carbo',
+        price: 5.00,
+        description: 'Pâtes avec lardon et ça sauce délicieuse!',
+        avatar: 'https://cdn.pixabay.com/photo/2015/04/08/13/13/pasta-712664_1280.jpg',
+        checked: false,
+        allergens: ['Allergen 1', 'Allergen 2'],
+    },
+    {
+        id: '2',
+        name: 'Pate bolo',
+        price: 15.62,
+        description: 'Pate à la sauce bolognaise avec viande hachée',
+        avatar: 'https://cdn.pixabay.com/photo/2015/05/27/18/53/spaghetti-787048_1280.jpg',
+        checked: false,
+        allergens: ['Allergen 1', 'Allergen 2'],
+    },
+    {
+        id: '3',
+        name: 'Cassoulet',
+        price: 56.54,
+        description: 'Délicieux cassoulet en 10min chez vous no arnaque ',
+        avatar: 'https://image.shutterstock.com/image-photo/white-bean-meat-600w-606062234.jpg',
+        checked: false,
+        allergens: ['Allergen 1', 'Allergen 2'],
+    },
+];
